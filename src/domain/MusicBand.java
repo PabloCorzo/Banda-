@@ -9,6 +9,8 @@ public class MusicBand extends Participant{
 
     public MusicBand(String name){
         super(name);
+        this.participants = new ArrayList<>();
+        this.acts = new ArrayList<>();
     }
 
     public void addAct(Act a){

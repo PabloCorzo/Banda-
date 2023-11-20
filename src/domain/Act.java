@@ -1,7 +1,6 @@
 package domain;
 
 import java.time.LocalDate;
-import java.time.Month;
 import java.util.ArrayList;
 
 public class Act {
@@ -11,6 +10,7 @@ public class Act {
     private ArrayList<Participant> participants;
 
     public Act(LocalDate l){
+        this.participants = new ArrayList<>();
         this.year = l.getYear();
         this.month = l.getMonth().toString();
         this.day = l.getDayOfMonth();
