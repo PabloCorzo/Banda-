@@ -9,4 +9,8 @@ public class MusicPartner extends Musician{
         super(name,instrument);
         this.id = id;
     }
+
+    public String toString(){
+        return this.getName()+", " + this.instrument+", numero de socio: " + this.id;
+    }
 }

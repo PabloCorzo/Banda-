@@ -8,4 +8,8 @@ public class Musician extends Participant{
         super(name);
         this.instrument = intrument;
     }
+
+    public String getInstrument(){
+        return this.instrument;
+    }
 }

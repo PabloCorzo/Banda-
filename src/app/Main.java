@@ -22,3 +22,13 @@ public class Main{
         System.out.println(mb);
     }
 }
+
+// BANDA DE MÚSICA DE VILLAR DEL MONTE
+// Fecha de actuación: 25-11-2019
+// José García López, director
+// Antonio López Suárez, clarinete, clarinete, número de socio: 28534
+// Juan Jaén Bernal, tuba, 121,00 C
+// Fecha de actuación: 16-12-2019
+// José García López, director
+// Antonio López Suárez, clarinete, clarinete, número de socio: 28534
+// María López Gil, oboe, 130,00 C

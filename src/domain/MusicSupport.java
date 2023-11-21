@@ -10,4 +10,7 @@ public class MusicSupport extends Musician{
         super(name,instrument);
         this.pay = b;
     }
+    public String toString(){
+        return this.getName()+", "+ this.getInstrument()+", " + this.pay +" €";
+    }
 }

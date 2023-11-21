@@ -21,5 +21,12 @@ public class MusicBand extends Participant{
         this.participants.add(p);
     }
     
-
+    public String toString(){
+        String tochaco = "";
+        for(Act a: this.acts){
+            tochaco += "\n";
+            tochaco += a.toString();
+        }
+        return tochaco;
+    }
 }
