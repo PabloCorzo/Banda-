@@ -10,7 +10,6 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.time.Year;
 import java.util.ArrayList;
 
 
@@ -146,28 +145,39 @@ public class Interface implements Serializable{
 	return input;
 	}
 
-	public void chooseMethod(String input){
+	public int chooseMethod(String input){
 	String[] split = input.split(" ");
 	if(split[0].equalsIgnoreCase("Help")){
 	this.help();
+	return 0;
 	}
 	else if(split[0].equalsIgnoreCase("Mostrar")){
 	this.show();
+	return 0;
 	}
 	else if(split[0].equalsIgnoreCase("Agregar") && split[1].equalsIgnoreCase("acto")){
 		this.addAct(this.getInput("Introduzca: nombre de la banda, dia, mes y año"));
+		return 0;
 	}
 	else if(split[0].equalsIgnoreCase("Agregar") && split[1].equalsIgnoreCase("participante")){
 		String type = this.getInput("Director, socio o apoyo?");
 		if(type.equalsIgnoreCase("Director")){
 			this.addDirector(this.getInput("Introduzca: banda y nombre"));
+			return 0;
 		}
 		else if(type.equalsIgnoreCase("Socio")){
 			this.addMusicPartner(this.getInput("Introduzca: banda, nombre, instrumento y codigo de id"));
+			return 0;	
 		}
 		else if(type.equalsIgnoreCase("Apoyo")){
 			this.addMusicSupport(this.getInput("Introduzca: banda, nombre, instrumento y paga"));
+			return 0;
 		}
 	}
+	else if(split[0].equalsIgnoreCase("Salir")){
+		this.save();
+		return -1;
+	}
+	return 0;
 	}
 }
